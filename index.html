@@ -14,45 +14,42 @@
 <body>
 
     <!--Header-->
-    <section id="header">
-        
-        <header class="header">
-
-            <div class="header__logo header__item">
-                <span>N<i class="material-icons">not_interested</i>Tfb</span>
-            </div>
-
-            <nav class="header__item">
-                <ul>
-                    <li><a href="#">Jasmine</a></li>
-                    <li><a href="#">Home</a></li>
-                </ul>
-            </nav>
-
-            <div class="header__icons header__item">
-
-                <div class="header__icons--primary">
-                    <a href="#"><i class="material-icons">people</i></a>
-                    <a href="#"><i class="material-icons">chat_bubble_outline</i></a>
-                    <a href="#"><i class="material-icons notifications_none">notifications_none</i></a>
-                </div>
-
-                <div class="header__icons--secondary">
-                    <a href="#">
-                        <i class="material-icons lock_open">lock_open</i><i class="material-icons expand_more">expand_more</i>
-                    </a>
-                </div>
-
+    <section>
+        <header id="header" class="header">
+            <div class="logo">
+                <h3>N<i class="material-icons">not_interested</i>Tfb</h3>
             </div>
             
-            <div class="header__search header__item">
-                <a href="#"><i class="material-icons">search</i></a>
-                
-                <input id="search" type="text" onfocus="this.value=''" placeholder="Search">
-                
-                <a href="#" onclick="document.getElementById('search').value = ''"><i class="material-icons">close</i></a>
+            <nav class="main_menu">  
+                <ul class="menu">
+                    <li><a href="#">Name</a></li>
+                    <li><a href="#">Home</a></li>
+                </ul>
+            
+            <div class="icons">
+                <div class="icons_group1">            
+                    <i class="material-icons">people</i>
+                    <i class="material-icons">chat_bubble_outline</i>
+                    <i class="material-icons">notifications_none</i>
+                </div>
+    
+                <div class="icons_group2">
+                    <i class="material-icons">lock_open</i>
+                    <i class="material-icons">expand_more</i>
+                </div>
+            </div>
+    
+            <div class="search">
+                <i class="material-icons">search</i>
+                <input type="text" placeholder="Search">
+                <i class="material-icons">close</i>
             </div>
 
+        </nav>
+        
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle">
+            
         </header>
     </section>
 
@@ -84,9 +81,9 @@
     <section id="content">
         
         <!--Left Side-->
-        <div class="content__container content__left">
+        <div id="left" class="content__container content__left">
 
-            <div class="intro__container">
+            <div id="intro" class="intro__container">
                 
                 <header class="content__header">
                     <i class="material-icons">public</i>
@@ -94,9 +91,10 @@
                 </header>
 
                 <div class="intro__content">
-
-                    <h3>Developer, photographer</h3>
-                    <i class="material-icons edit">edit</i>
+                    <div>
+                        <h3>Developer, photographer</h3>
+                        <i class="material-icons edit">edit</i>
+                    </div>
 
                     <p>Originally from Baltimore<br> Lives in Atlanta, GA</p>
                     <p>From United States of America</p>
@@ -107,7 +105,7 @@
             </div>
 
             <!-- Photos Section -->
-            <div class="gallery__container">
+            <div id="photos" class="gallery__container">
 
                 <header class="content__header">
                     <div class="content__header--left">
@@ -134,7 +132,7 @@
             </div>
 
             <!-- Friends Section -->
-            <div class="gallery__container">
+            <div id="friends" class="gallery__container">
 
                 <div class="content__header">
                     <div class="content__header--left">
@@ -162,28 +160,29 @@
             </div>
         </div>
 
+        
         <!-- Right Side -->
-        <div class="content__right content__container">
+        <div id="right" class="content__right content__container">
 
             <!--Menu-->
             <nav class="content__menu">
-                
+                        
                 <ul>
                     <li class="active">
                         <i class="material-icons">schedule</i>
-                        <span>Timeline</span>
+                        <a id="timelineLnk" href="#" >Timeline</a>
                     </li>
                     <li>
                         <i class="material-icons">contact_page</i>
-                        <span>About</span>
+                        <a id="introLnk" href="#">About</a>
                     </li>
                     <li>
                         <i class="material-icons">groups</i>
-                        <span>Friends</span>
+                        <a id="friendsLnk" href="#">Friends</a>
                     </li>
                     <li>
                         <i class="material-icons">photo_camera</i>
-                        <span>Photos</span>
+                        <a id="photosLnk" href="#">Photos</a>
                     </li>
                     <li>
                         <i class="material-icons more_vert">more_vert</i>
@@ -192,7 +191,7 @@
 
             </nav>
 
-            <!-- Right Side Top Container -->
+            <!-- Timeline - Right Side Top Container -->
             <div class="content__post">
 
                 <div class="content__post__share">
@@ -291,6 +290,7 @@
         
 
     </section>
+    <script src="js/main3.js"></script>
 
 </body>
 </html>
